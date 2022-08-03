@@ -1,0 +1,245 @@
+
+// Task 
+  
+      Basal Metabolic Rate (BMR) Calculator
+  Create an HTML document called assignment1.html that implements a calorie intake
+  calculator based on the Harris-Benedict equation used by nutritionists and health
+  professionals to determine the daily energy needs based on age, sex, height, weight
+  and level of physical activity.
+  
+// Code =============================================================================================================================
+
+
+<html>
+<head>
+<meta content="en-us" http-equiv="Content-Language">
+<title> Metric BMR Calculator  </title>
+
+<style type="text/css">
+		.content{
+      max-width: 2000px;
+      margin: auto;
+    }
+    	.auto-style7 {
+			text-align: center;
+			vertical-align:middle;
+			width: auto;
+
+		}
+		.auto-style25 {
+			text-align: center;
+			background-color: #6698AE;
+		}
+		.auto-style27 {
+	text-align: center;
+	font-size: xx-large;
+	font-weight: bold;
+}
+		.auto-style35 {
+	font-size: large;
+} 
+		.auto-style40 {
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: bold;
+	font-size: xx-large;
+}
+		.auto-style42 {
+	text-align: center;
+	border: 4px solid #000000;
+}
+.auto-style43 {
+	text-align: center;
+}
+		.auto-style44 {
+	border: 2px solid #000000;
+}
+.auto-style45 {
+	border: 2px solid #000000;
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: bold;
+	font-size: xx-large;
+}
+.auto-style46 {
+	border: 2px solid #000000;
+	text-align: center;
+}
+		.auto-style47 {
+	border: 3px solid #000000;
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: bold;
+	font-size: large;
+}
+		.auto-style48 {
+	background-color: #C0C0C0;
+}
+		</style>
+    </head>
+<body style="height: 1900px;" style="width:auto">
+<div class="content" style="height: 1998px">
+
+  <div class="content" style="height: 230px">
+
+
+	<table style="width: 100%; height: 196px">
+		<tr>
+			<td class="auto-style40">
+		      BMR 
+					Calculator</td>
+		</tr>
+	</table>
+
+
+   </div>
+<div class="content" style="height: 1500px">
+<form action="#">
+
+	<table style="width: 100%; height: 1470" class="auto-style48">
+		<tr>
+			<td class="auto-style42">
+			<table style="width: 100%; height: 666;" class="auto-style44">
+				<tr>
+					<td class="auto-style45" style="height: 26; width: 810">
+					Gender</td>
+					<td class="auto-style43" style="height: 26px">
+					<table class="auto-style44" style="width: 100%">
+						<tr>
+							<td class="auto-style46" style="width: 388; height: 26">
+							 <input type="radio" id="gender" name="gender" value="masc" checked> Male<br>
+							
+							</td>
+							<td class="auto-style46" style="height: 26">
+							<input type="radio" id="gender" name="gender" value="fem"> Female<br>
+							
+							</td>
+						</tr>
+					</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="auto-style45" style="width: 810">Age</td>
+					<td class="auto-style46" style="width: 810">
+					<input type="number" id="age" value="20"><br>
+					
+					</td>
+				</tr>
+				<tr>
+					<td class="auto-style45" style="width: 810">Height</td>
+					<td class="auto-style46" style="width: 810">
+					 <input type="number" id="height" value="180"><br>
+					
+					</td>
+				</tr>
+				<tr>
+					<td class="auto-style45" style="width: 810">Weight</td>
+					<td class="auto-style46" style="width: 810">
+					 <input type="number" id="weigth" value="80"><br>
+					
+					</td>
+				</tr>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="auto-style42">
+			<table style="width: 100%; height: 256px;">
+				<tr>
+					<td class="auto-style47" style="height: 136px">
+					<button type="button"
+onclick="" style="height: 70px; width: 280px">
+					Result</button>
+
+					
+					</td>
+				</tr>
+				<tr>
+					<td class="auto-style42">
+					<p id="lblResult" style="height: 98px"></p>
+					
+					</td>
+				</tr>
+			</table>
+			</td>
+		</tr>
+	</table>
+ <script>
+var bmr;
+
+
+    
+function calc() {
+  var age = document.getElementById("age").value;
+  var gender = document.getElementById("gender").value;
+  var height = document.getElementById("height").value;
+  var weigth = document.getElementById("weigth").value;
+  if (gender == "masc") {
+  bmr = 66.5 + ( 13.75 * weigth ) + ( 5.003 * height ) - ( 6.755 * age );
+  }
+  else {
+  bmr = 655.1 + ( 9.563 * weigth ) + ( 1.850 * height ) - ( 4.676 * age );
+  } 
+}
+
+    
+    
+
+document.getElementsByTagName("button")[0].addEventListener("click", function() {
+  calc();
+  document.getElementById('lblResult').innerHTML = bmr;
+
+})
+
+ 
+    
+
+</script>
+
+
+</form>
+</div>
+<div class="content" style="height: 229px">
+
+    		<table style="width: 100%; height: 222" align="center">
+				<tr>
+					<td class="auto-style25">
+					<table style="width: 100%; height: 158" align="center">
+						<tr>
+							<td class="auto-style7" style="width: 850px">
+							<table style="width: 100%">
+								<tr>
+									<td class="auto-style7" style="height: 67">
+									7 Drake Field, Markham Ontario,<br>&nbsp;Toronto 
+									Canada</td>
+								</tr>
+								</table>
+							<h6 class="auto-style35">©&nbsp;&nbsp;&nbsp;Copyright John Kenneth 
+							Fonollera</h6>
+							</td>
+							<td class="auto-style7">
+							<table style="width: 100%">
+								<tr>
+									<td class="auto-style27" style="height: 67px">
+									John Kenneth D. Fonollera</td>
+								</tr>
+								<tr>
+									<td class="auto-style7">
+									<a href="mailto:jkfonollera2@gmail.com">
+									jkfonollera2@gmail.com</a></td>
+								</tr>
+							</table>
+							</td>
+						</tr>
+					</table>
+					</td>
+				</tr>
+			</table>
+ 
+   </div>
+
+</div>
+
+</body>
+
+</html>
