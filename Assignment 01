@@ -1,16 +1,4 @@
-
-// Task 
-  
-      Basal Metabolic Rate (BMR) Calculator
-  Create an HTML document called assignment1.html that implements a calorie intake
-  calculator based on the Harris-Benedict equation used by nutritionists and health
-  professionals to determine the daily energy needs based on age, sex, height, weight
-  and level of physical activity.
-  
-// Code =============================================================================================================================
-
-
-<html>
+<!Doctype html>
 <head>
 <meta content="en-us" http-equiv="Content-Language">
 <title> Metric BMR Calculator  </title>
@@ -242,4 +230,4 @@ document.getElementsByTagName("button")[0].addEventListener("click", function() 
 
 </body>
 
-</html>
+<html/>
